@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'shop',
     'content',
     'zakaz',
+    'tinymce',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -65,3 +66,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+TINYMCE_JS_URL = MEDIA_URL + 'tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_ROOT = MEDIA_ROOT + '/tiny_mce'
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+}
+TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = True
